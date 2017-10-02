@@ -1,7 +1,7 @@
 {
-  "name": "spotify-st",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "Stranger things character match",
+  "description": "My custom boilerplate repo",
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"yarn server\" \"yarn client\"",

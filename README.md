@@ -1,4 +1,4 @@
-# Spotify Stranger Things
+# Boilerplate
 
 
 ## Architecture
