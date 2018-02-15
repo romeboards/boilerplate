@@ -7,16 +7,24 @@
 The backend of the app (`/server`) is a simple express build.
 
 #### Frontend
-The frontend of the app (`/client`) is built on top of [create-react-app](https://github.com/facebookincubator/create-react-app). See [`/client/README.md`](https://github.com/JustFixNYC/who-owns-what/blob/master/client/README.md) for all the info you might need.
+The frontend of the app (`/client`) is built on top of [create-react-app](https://github.com/facebookincubator/create-react-app).
+
+*NOTE:* in order to keep CRA up-to-date, you should instantiate it on your end. See instructions below.
 
 ## Setup
 Make sure you have [yarn](https://yarnpkg.com/en/)  and then just
 
 ```
-yarn install && cd client && yarn install
+yarn install
 ```
 
-to grab dependencies for both server and client. You'll probably need a `.env` in the root directory for things as they develop.
+to grab dependencies for the server. You'll probably need a `.env` in the root directory for things as they develop.
+
+Create a fresh CRA build as `client`:
+
+```
+npx create-react-app client
+```
 
 ## Running in development
 Check `package.json` in the root directory for all options. To run both `express` and `create-react-app` you just need
