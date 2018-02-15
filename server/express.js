@@ -3,6 +3,9 @@ const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
+const helmet = require('helmet');
+
 const routes = require('./routes');
 
 // Set up the express app
@@ -17,6 +20,13 @@ app.use(cookieParser());
 // Parse incoming requests data (https://github.com/expressjs/body-parser)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Use helmet to secure Express headers
+app.use(helmet());
+
+// Gzip time
+// https://expressjs.com/en/advanced/best-practice-performance.html
+app.use(compression());
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
